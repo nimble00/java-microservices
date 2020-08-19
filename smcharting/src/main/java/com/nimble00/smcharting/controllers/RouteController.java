@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RouteController {
 
-    @RequestMapping("/signup")
-    @ResponseBody
-    public String registerUser() {
-        return "Hello new user. Here we'll serve a rest API endpoint for registration";
-    }
+//    @RequestMapping("/signup")
+//    @ResponseBody
+//    public String registerUser() {
+//        return "Hello new user. Here we'll serve a rest API endpoint for registration";
+//    }
 }

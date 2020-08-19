@@ -17,16 +17,16 @@ public class SMChartingApplication {
         SpringApplication.run(SMChartingApplication.class, args);
 //        SpringApplication.run(RouteController.class, args);
     }
-//
-//    @RequestMapping("/signup")
-//    @ResponseBody
-//    public String newUser() {
-//        return "Hello new user. Here we'll serve a rest API endpoint for registration";
-//    }
-//
-//    @RequestMapping("/companies")
-//    @ResponseBody
-//    public String companiesView() {
-//        return "Hello user. Here we'll serve a rest API endpoint for company view";
-//    }
+
+    @RequestMapping("/signup")
+    @ResponseBody
+    public String newUser() {
+        return "Hello new user. Here we'll serve a rest API endpoint for registration";
+    }
+
+    @RequestMapping("/companies")
+    @ResponseBody
+    public String companiesView() {
+        return "Hello user. Here we'll serve a rest API endpoint for company view";
+    }
 }
