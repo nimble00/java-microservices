@@ -1,4 +1,4 @@
-package com.nimble00.smcharting;
+package com.nimble00.smcharting.configs;
 
 import com.nimble00.smcharting.services.MyUserDetailsService;
 import org.springframework.context.annotation.*;
