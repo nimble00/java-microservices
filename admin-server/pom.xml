@@ -9,36 +9,28 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.nimble00</groupId>
-    <artifactId>eurekaserver</artifactId>
+    <artifactId>admin-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eurekaserver</name>
-    <description>Eureka Server for Microservice Discoovery</description>
+    <name>admin-server</name>
+    <description>Admin server for all other services</description>
 
     <properties>
         <java.version>11</java.version>
-        <spring-cloud.version>Hoxton.SR7</spring-cloud.version>
+        <spring-boot-admin.version>2.3.0</spring-boot-admin.version>
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-starter-client -->
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>2.1.4</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
         </dependency>
 
         <dependency>
@@ -63,9 +55,9 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-dependencies</artifactId>
+                <version>${spring-boot-admin.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
